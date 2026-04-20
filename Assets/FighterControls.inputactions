@@ -1,0 +1,77 @@
+{
+    "version": 1,
+    "name": "FighterControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "30871eb1-9a89-484a-85b7-7e60102b405b",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "df0e6e92-4cd4-47b9-abb1-1f7e95ef19f4",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "ada496e6-621b-49d5-a520-4f648de7977b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "9a8192c8-313c-46a0-831d-86fcf16d5991",
+                    "path": "1DAxis(whichSideWins=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "295e077c-a826-48c4-aaf6-bdbd25136557",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "d0e231ae-ed2e-42b8-9820-dfbdbc72b02b",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "f9e20431-435d-4bc4-95ed-a8e8db7b146e",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
