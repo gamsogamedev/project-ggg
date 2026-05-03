@@ -6,7 +6,8 @@ public class FighterInput : MonoBehaviour
 {
     public InputActionReference moveAction;
     public InputActionReference attackAction;
-
+	public InputActionReference jumpAction;
+	
     private FighterMovement movement;
     private FighterCombat combat;
 
@@ -20,12 +21,14 @@ public class FighterInput : MonoBehaviour
     {
         if (moveAction != null) moveAction.action.Enable();
         if (attackAction != null) attackAction.action.Enable();
+		if (jumpAction != null) jumpAction.action.Enable();
     }
 
     void OnDisable()
     {
         if (moveAction != null) moveAction.action.Disable();
         if (attackAction != null) attackAction.action.Disable();
+		if (jumpAction != null) jumpAction.action.Disable();
     }
 
     void Update()
@@ -35,7 +38,12 @@ public class FighterInput : MonoBehaviour
             float direction = moveAction.action.ReadValue<float>();
             movement.SetMoveDirection(direction);
         }
-
+		
+		if (jumpAction != null && jumpAction.action.WasPressedThisFrame())
+        {
+            movement.Jump();
+        }
+		
         if (attackAction != null && attackAction.action.WasPressedThisFrame())
         {
             combat.PerformAttack();
