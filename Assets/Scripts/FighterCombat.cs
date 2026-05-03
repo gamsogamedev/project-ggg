@@ -9,10 +9,12 @@ public class FighterCombat : MonoBehaviour
     private bool isAttacking = false;
 
     private Animator anim;
+	private FighterAudio fighterAudio;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
+		fighterAudio = GetComponent<FighterAudio>();
     }
 
     public void PerformAttack()
@@ -40,6 +42,7 @@ public class FighterCombat : MonoBehaviour
                 if (health != null) 
                 {
                     health.TakeDamage(attackDamage);
+					fighterAudio.PlayHitSound();
                 }
             }
         }
