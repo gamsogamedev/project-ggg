@@ -14,6 +14,7 @@ public class FighterMovement : MonoBehaviour
     private Animator anim;
     private float moveDirection;
     private bool isGrounded;
+	private bool isCrouching;
 
     void Awake()
     {
@@ -25,18 +26,30 @@ public class FighterMovement : MonoBehaviour
     {
         moveDirection = direction;
     }
-
+	
+	public void SetCrouch(bool crouch)
+	{
+		isCrouching = crouch;
+		if (anim != null) anim.SetBool("isCrouching", isCrouching);
+	}
+	
     void FixedUpdate() 
     {
 	
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		
-		if (anim != null) anim.SetBool("isGrounded", isGrounded);
+		if (anim != null) 
+		{
+			anim.SetBool("isGrounded", isGrounded);
+			anim.SetFloat("verticalVelocity", rb.linearVelocity.y);
+		}			
+
 		
+		float finalSpeed = isCrouching ? 0 : moveDirection * speed;
 		
-        rb.linearVelocity = new Vector2(moveDirection * speed, rb.linearVelocity.y);
-		
-        bool isMoving = Mathf.Abs(moveDirection) > 0.1f;
+		rb.linearVelocity = new Vector2(finalSpeed, rb.linearVelocity.y);
+
+		bool isMoving = Mathf.Abs(finalSpeed) > 0.1f;
 
         if (anim != null) anim.SetBool("isWalking", isMoving);
 
@@ -45,7 +58,7 @@ public class FighterMovement : MonoBehaviour
 	
 	public void Jump()
 	{
-		if (isGrounded)
+		if (isGrounded && !isCrouching)
 		{
 			rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 			if (anim != null) anim.SetTrigger("Jump");

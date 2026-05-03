@@ -35,8 +35,13 @@ public class FighterInput : MonoBehaviour
     {
         if (moveAction != null)
         {
-            float direction = moveAction.action.ReadValue<float>();
-            movement.SetMoveDirection(direction);
+			Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+            
+            movement.SetMoveDirection(moveInput.x);
+			
+			bool isCrouching = moveInput.y < -0.5f;
+            movement.SetCrouch(isCrouching);
+			
         }
 		
 		if (jumpAction != null && jumpAction.action.WasPressedThisFrame())
