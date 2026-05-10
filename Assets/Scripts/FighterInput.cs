@@ -33,13 +33,15 @@ public class FighterInput : MonoBehaviour
 
     void Update()
     {
+		Vector2 moveInput = Vector2.zero;
+		
         if (moveAction != null)
         {
-			Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+			moveInput = moveAction.action.ReadValue<Vector2>();
             
             movement.SetMoveDirection(moveInput.x);
 			
-			bool isCrouching = moveInput.y < -0.5f;
+			bool isCrouching = moveInput.y < -0.5f && Mathf.Abs(moveInput.x) < 0.4f;
             movement.SetCrouch(isCrouching);
 			
         }
@@ -51,7 +53,7 @@ public class FighterInput : MonoBehaviour
 		
         if (attackAction != null && attackAction.action.WasPressedThisFrame())
         {
-            combat.PerformAttack();
+            combat.PerformAttack(moveInput.y);
         }
     }
 }

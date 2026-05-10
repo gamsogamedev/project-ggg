@@ -6,6 +6,12 @@ public class FighterCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
     public int attackDamage = 10;
+	
+	[Header("Posições do Attack Point (Local)")]
+    public Vector3 posicaoAtaqueNormal = new Vector3(0.5f, 0f, 0f);
+    public Vector3 posicaoAtaqueCima = new Vector3(0.5f, 0.5f, 0f);
+    public Vector3 posicaoAtaqueBaixo = new Vector3(0.5f, -0.5f, 0f);
+	
     private bool isAttacking = false;
 
     private Animator anim;
@@ -17,17 +23,31 @@ public class FighterCombat : MonoBehaviour
 		fighterAudio = GetComponent<FighterAudio>();
     }
 
-    public void PerformAttack()
+	public void PerformAttack(float yInput)
     {
         if (isAttacking) return;
 
         if (anim != null) 
         {
             isAttacking = true;
-            anim.SetTrigger("Attack");
+
+            if (yInput > 0.4f)
+            {
+                attackPoint.localPosition = posicaoAtaqueCima;
+                anim.SetTrigger("AttackUp");
+            }
+            else if (yInput < -0.4f)
+            {
+                attackPoint.localPosition = posicaoAtaqueBaixo;
+                anim.SetTrigger("AttackDown");
+            }
+            else
+            {
+                attackPoint.localPosition = posicaoAtaqueNormal;
+                anim.SetTrigger("Attack");
+            }
         }
     }
-
     
     public void ExecuteDamage() 
     {
