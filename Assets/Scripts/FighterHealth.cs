@@ -9,6 +9,18 @@ public class FighterHealth : MonoBehaviour
 	[Header("Interface")]
     public Image healthBarFill;
 	
+	[Header("Barra Fantasma")]
+    public Image ghostBarFill;
+    public float tempoEsperaRastro = 0.5f;
+    public float velocidadeRastro = 1.0f;
+    private float timerRastro;
+	
+	[Header("Alerta de Vida Baixa")]
+    public float porcentagemPerigo = 0.25f;
+    public Color corNormal = Color.yellow;
+    public Color corPerigo = Color.red;
+    public float velocidadePiscar = 6f;
+	
     private Animator anim;
     private FighterMovement movementScript;
     private FighterCombat combatScript;
@@ -29,9 +41,46 @@ public class FighterHealth : MonoBehaviour
             anim.SetInteger("currentHealth", currentHealth);
         }
 		
+		if (healthBarFill != null) healthBarFill.color = corNormal;
 		UpdateHealthBar();
+		
+		if (ghostBarFill != null) ghostBarFill.fillAmount = 1f;
     }
 
+	
+	void Update()
+    {
+
+        if (ghostBarFill != null && healthBarFill != null)
+        {
+            if (timerRastro > 0)
+            {
+
+                timerRastro -= Time.deltaTime; 
+            }
+            else
+            {
+
+                if (ghostBarFill.fillAmount > healthBarFill.fillAmount)
+                {
+                    ghostBarFill.fillAmount -= velocidadeRastro * Time.deltaTime;
+                }
+            }
+        }
+
+        if (healthBarFill != null && currentHealth > 0)
+        {
+            float porcentagemAtual = (float)currentHealth / maxHealth;
+            
+            if (porcentagemAtual <= porcentagemPerigo)
+            {
+
+                float t = Mathf.PingPong(Time.time * velocidadePiscar, 1f);
+                healthBarFill.color = Color.Lerp(corNormal, corPerigo, t);
+            }
+        }
+    }
+	
     public void TakeDamage(int damage)
     {
         if (currentHealth <= 0) return;
@@ -44,12 +93,12 @@ public class FighterHealth : MonoBehaviour
         }
 		
 		UpdateHealthBar();
+		timerRastro = tempoEsperaRastro;
 		
-        Debug.Log($"{gameObject.name} tomou {damage} de dano! Vida: {currentHealth}");
 
         if (currentHealth <= 0)
         {
-            Debug.Log($"{gameObject.name} foi nocauteado!");
+			if (healthBarFill != null) healthBarFill.color = corPerigo;
             Die();
         }
     }
