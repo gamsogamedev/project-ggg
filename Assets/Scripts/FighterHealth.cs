@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FighterHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
 
+	[Header("Interface")]
+    public Image healthBarFill;
+	
     private Animator anim;
     private FighterMovement movementScript;
     private FighterCombat combatScript;
@@ -24,7 +28,8 @@ public class FighterHealth : MonoBehaviour
         {
             anim.SetInteger("currentHealth", currentHealth);
         }
-
+		
+		UpdateHealthBar();
     }
 
     public void TakeDamage(int damage)
@@ -37,13 +42,23 @@ public class FighterHealth : MonoBehaviour
         {
             anim.SetInteger("currentHealth", currentHealth);
         }
-
+		
+		UpdateHealthBar();
+		
         Debug.Log($"{gameObject.name} tomou {damage} de dano! Vida: {currentHealth}");
 
         if (currentHealth <= 0)
         {
             Debug.Log($"{gameObject.name} foi nocauteado!");
             Die();
+        }
+    }
+	
+	private void UpdateHealthBar()
+    {
+        if (healthBarFill != null)
+        {
+            healthBarFill.fillAmount = (float)currentHealth / maxHealth;
         }
     }
 
