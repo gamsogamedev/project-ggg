@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class FighterHealth : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth { get; private set; }
 
 	[Header("Interface")]
     public Image healthBarFill;
@@ -118,12 +118,7 @@ public class FighterHealth : MonoBehaviour
         if (movementScript != null) movementScript.enabled = false;
         if (combatScript != null) combatScript.enabled = false;
 
-        Invoke("DisableCharacter", 2.0f); 
     }
 
-    private void DisableCharacter()
-    {
-        gameObject.SetActive(false); 
-    }
 
 }
