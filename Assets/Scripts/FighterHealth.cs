@@ -113,7 +113,6 @@ public class FighterHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log($"{gameObject.name} foi nocauteado!");
         
         if (movementScript != null) movementScript.enabled = false;
         if (combatScript != null) combatScript.enabled = false;
