@@ -6,8 +6,20 @@ using UnityEngine.SceneManagement;
 public class StartMenuController : MonoBehaviour
 {
 
+    public Animator transition;
+    public float transitionTime = 1f;
+
     public void OnStartClick()
     {
+        SceneManager.LoadScene("Combate");
+    }
+
+    IEnumerator LoadLevel()
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
         SceneManager.LoadScene("Combate");
     }
 
