@@ -35,6 +35,12 @@ public class ProjectileProperties : MonoBehaviour
         if(collision.gameObject != origin && collision.gameObject.TryGetComponent<FighterHealth>(out FighterHealth health))
         {
             health.TakeDamage(6);
+
+            if (origin != null && origin.TryGetComponent<FighterAudio>(out FighterAudio audioAtacante))
+            {
+                audioAtacante.PlayHitNormalSound();
+            }
+            
             Destroy(gameObject);
         }
         StartCoroutine(RecycleProjectile(3));

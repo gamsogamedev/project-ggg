@@ -581,7 +581,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterAudio
   sfxSource: {fileID: 408509957}
-  hitSound: {fileID: 8300000, guid: 0ee45d6d4b0045348a9bfb080cd498e4, type: 3}
+  hitNormalSound: {fileID: 0}
+  hitNormalVolume: 1
+  hitUpSound: {fileID: 0}
+  hitUpVolume: 1
+  hitDownSound: {fileID: 0}
+  hitDownVolume: 1
 --- !u!111 &408509959
 Animation:
   m_ObjectHideFlags: 0
@@ -696,6 +701,7 @@ MonoBehaviour:
     m_Bits: 8
   attackDamage: 10
   Projetil: {fileID: 164307453392712662, guid: 09623aa409f4f1247814b06fc6a4c8f3, type: 3}
+  offsetProjetil: {x: 0, y: 1, z: 0}
   posicaoAtaqueNormal: {x: 0.5, y: 0, z: 0}
   posicaoAtaqueCima: {x: 0.5, y: 0.5, z: 0}
   posicaoAtaqueBaixo: {x: 0.5, y: -0.5, z: 0}
@@ -2211,6 +2217,7 @@ MonoBehaviour:
     m_Bits: 8
   attackDamage: 10
   Projetil: {fileID: 164307453392712662, guid: 09623aa409f4f1247814b06fc6a4c8f3, type: 3}
+  offsetProjetil: {x: 0, y: 1.5, z: 0}
   posicaoAtaqueNormal: {x: 1, y: 1.8, z: 0}
   posicaoAtaqueCima: {x: 1, y: 2.5, z: 0}
   posicaoAtaqueBaixo: {x: 1, y: 0.4, z: 0}
@@ -2362,7 +2369,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterAudio
   sfxSource: {fileID: 1396889887}
-  hitSound: {fileID: 8300000, guid: 0ee45d6d4b0045348a9bfb080cd498e4, type: 3}
+  hitNormalSound: {fileID: 8300000, guid: 102bd2f96a265d34cacce75f71f90d62, type: 3}
+  hitNormalVolume: 1
+  hitUpSound: {fileID: 8300000, guid: a88f6927ade001544bc85233c069a1e5, type: 3}
+  hitUpVolume: 1
+  hitDownSound: {fileID: 8300000, guid: b9ebee3322639354dbf214703da72db0, type: 3}
+  hitDownVolume: 1
 --- !u!1 &1411103870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,7 +3209,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1904618718
