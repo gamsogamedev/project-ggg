@@ -7,6 +7,7 @@ public class FighterInput : MonoBehaviour
     public InputActionReference moveAction;
     public InputActionReference attackAction;
 	public InputActionReference jumpAction;
+    public InputActionReference wpnAttackAction;
 	
     private FighterMovement movement;
     private FighterCombat combat;
@@ -22,6 +23,7 @@ public class FighterInput : MonoBehaviour
         if (moveAction != null) moveAction.action.Enable();
         if (attackAction != null) attackAction.action.Enable();
 		if (jumpAction != null) jumpAction.action.Enable();
+        if (wpnAttackAction != null) wpnAttackAction.action.Enable();
     }
 
     void OnDisable()
@@ -29,6 +31,7 @@ public class FighterInput : MonoBehaviour
         if (moveAction != null) moveAction.action.Disable();
         if (attackAction != null) attackAction.action.Disable();
 		if (jumpAction != null) jumpAction.action.Disable();
+        if (wpnAttackAction != null) wpnAttackAction.action.Disable();
     }
 
     void Update()
@@ -54,6 +57,12 @@ public class FighterInput : MonoBehaviour
         if (attackAction != null && attackAction.action.WasPressedThisFrame())
         {
             combat.PerformAttack(moveInput.y);
+        }
+
+        if (wpnAttackAction != null && wpnAttackAction.action.WasPressedThisFrame())
+        {
+            float directionToOpponent = movement.opponent.position.x - transform.position.x; // peço perdão senhor tixas :(
+            combat.SpawnProjectile(moveInput.y, directionToOpponent);
         }
     }
 }

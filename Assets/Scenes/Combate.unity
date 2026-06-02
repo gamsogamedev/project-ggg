@@ -635,6 +635,7 @@ MonoBehaviour:
   moveAction: {fileID: -4384966699682877938, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
   attackAction: {fileID: 2126456309765177077, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
   jumpAction: {fileID: -1083081132216131226, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
+  wpnAttackAction: {fileID: -4530583965042387637, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
 --- !u!114 &408509962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,6 +695,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   attackDamage: 10
+  Projetil: {fileID: 164307453392712662, guid: 09623aa409f4f1247814b06fc6a4c8f3, type: 3}
   posicaoAtaqueNormal: {x: 0.5, y: 0, z: 0}
   posicaoAtaqueCima: {x: 0.5, y: 0.5, z: 0}
   posicaoAtaqueBaixo: {x: 0.5, y: -0.5, z: 0}
@@ -1302,7 +1304,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000bff3357a2db74ac915d87cce
+  m_ApplyToSortingLayers: 00000000bff3357a2db74ac915d87cce0746b6b9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1366,7 +1368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &762165475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2148,6 +2150,7 @@ MonoBehaviour:
   moveAction: {fileID: 2078048336269719282, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
   attackAction: {fileID: -5116134268690622426, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
   jumpAction: {fileID: 4877042418804729285, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
+  wpnAttackAction: {fileID: -2784388204869930511, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
 --- !u!114 &1396889882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2207,6 +2210,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   attackDamage: 10
+  Projetil: {fileID: 164307453392712662, guid: 09623aa409f4f1247814b06fc6a4c8f3, type: 3}
   posicaoAtaqueNormal: {x: 1, y: 1.8, z: 0}
   posicaoAtaqueCima: {x: 1, y: 2.5, z: 0}
   posicaoAtaqueBaixo: {x: 1, y: 0.4, z: 0}
