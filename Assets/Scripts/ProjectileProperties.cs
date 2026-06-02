@@ -1,11 +1,5 @@
 using System.Collections;
-using System.Numerics;
-using JetBrains.Annotations;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
-using UnityEngine.Rendering;
-using Vector2 = UnityEngine.Vector2;
-
 
 public class ProjectileProperties : MonoBehaviour
 {
@@ -21,11 +15,11 @@ public class ProjectileProperties : MonoBehaviour
         Vector2 vector = transform.right;
         if(direction > 0)
         {
-            GetComponent<Rigidbody2D>().position += 5 * Time.deltaTime * vector;
+            GetComponent<Rigidbody2D>().position += speed * Time.deltaTime * vector;
         }
         else
         {
-            GetComponent<Rigidbody2D>().position += 5 * Time.deltaTime * -vector;
+            GetComponent<Rigidbody2D>().position += speed * Time.deltaTime * -vector;
         }
     }
 

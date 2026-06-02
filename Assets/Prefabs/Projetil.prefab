@@ -180,5 +180,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileProperties
   origin: {fileID: 0}
-  speed: 3
+  speed: 10
   direction: 0
