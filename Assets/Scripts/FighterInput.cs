@@ -45,8 +45,7 @@ public class FighterInput : MonoBehaviour
     {
         if (value.isPressed)
         {
-            float directionToOpponent = movement.opponent.position.x - transform.position.x;
-            combat.SpawnProjectile(moveInput.y, directionToOpponent);
+            combat.ThrowProjectile();
         }
     }
 }

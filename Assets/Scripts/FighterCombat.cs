@@ -62,8 +62,25 @@ public class FighterCombat : MonoBehaviour
         }
     }
 
-    public void SpawnProjectile(float yInput, float direction)
+    // animação de jogar projétil
+    public void ThrowProjectile()
     {
+        if (isAttacking) return;
+
+        if (anim != null)
+        {
+            isAttacking = true;
+
+            anim.SetTrigger("CardThrow");
+        }
+    }
+
+    // o spawnar e jogar o projétil em si, utilizado como propriedade dentro da animação
+    public void SpawnProjectile()
+    {
+        FighterMovement movement = GetComponent<FighterMovement>();
+        float direction = movement.opponent.position.x - transform.position.x;
+
         if (Projetil != null)
         {
             GameObject cloneProjetil = Instantiate(Projetil, transform.position + offsetProjetil, Quaternion.identity);
