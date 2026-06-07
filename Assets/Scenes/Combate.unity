@@ -1307,7 +1307,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 792b168c6fa8c1b468638fe1592cb79c, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4cb1dac999311134686ef0d262742336, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.044
   m_Pitch: 1
@@ -1405,8 +1405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3d717a2141d4547b374cb58f61d41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicLooper
-  tempoDeInicio: 8
-  tempoDeFim: 29.7
+  tempoDeInicio: 0
+  tempoDeFim: 37
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
