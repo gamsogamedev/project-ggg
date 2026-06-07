@@ -11,16 +11,21 @@ public class StartMenuController : MonoBehaviour
 
     public void OnStartClick()
     {
-        SceneManager.LoadScene("Combate");
+        StartCoroutine(LoadLevel("Combate"));
     }
 
-    IEnumerator LoadLevel()
+    public void ToMenuClick()
+    {
+        StartCoroutine(LoadLevel("Menu"));
+    }
+
+    IEnumerator LoadLevel(string cena)
     {
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene("Combate");
+        SceneManager.LoadScene(cena);
     }
 
     public void OnExitCLick()
