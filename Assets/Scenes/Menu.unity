@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fade
       objectReference: {fileID: 0}
+    - target: {fileID: 5538851926297120008, guid: f1ed2b3791991f64d82f6578e2e1c793, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146683762958808659, guid: f1ed2b3791991f64d82f6578e2e1c793, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8300962862750551224, guid: f1ed2b3791991f64d82f6578e2e1c793, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -295,6 +303,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &992749096 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 402636924049577198, guid: f1ed2b3791991f64d82f6578e2e1c793, type: 3}
+  m_PrefabInstance: {fileID: 150157093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1014815136
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,9 +369,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.4943396, g: 0.4943396, b: 0.4943396, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.9607844, b: 0.34509805, a: 1}
+    m_PressedColor: {r: 0.7764706, g: 0.74509805, b: 0.27058825, a: 1}
+    m_SelectedColor: {r: 1, g: 0.9625647, b: 0.34528297, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -868,9 +881,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.9607843, b: 0.34509805, a: 1}
+    m_PressedColor: {r: 0.7735849, g: 0.7432568, b: 0.2671057, a: 1}
+    m_SelectedColor: {r: 1, g: 0.9607843, b: 0.34509805, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1134,7 +1147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PROJECT GGG
+  m_text: Gritty Gambit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1227,8 +1240,10 @@ GameObject:
   - component: {fileID: 2011547167}
   - component: {fileID: 2011547166}
   - component: {fileID: 2011547169}
+  - component: {fileID: 2011547170}
+  - component: {fileID: 2011547171}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MenuButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1331,8 +1346,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853e17592eb706e4db655aca3d448c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  transition: {fileID: 0}
+  transition: {fileID: 992749096}
   transitionTime: 1
+--- !u!114 &2011547170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011547164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f19cfeacd6296428160e60ca46ed23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  _mainMenuFirst: {fileID: 1014815136}
+--- !u!114 &2011547171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011547164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: f90f406272f364d4bb311dc5bc7fd952, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: 30871eb1-9a89-484a-85b7-7e60102b405b
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
