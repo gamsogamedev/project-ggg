@@ -83,7 +83,11 @@ public class FighterCombat : MonoBehaviour
 
         if (Projetil != null)
         {
-            GameObject cloneProjetil = Instantiate(Projetil, transform.position + offsetProjetil, Quaternion.identity);
+            Vector3 offsetCalculado = offsetProjetil;
+            
+            offsetCalculado.x *= Mathf.Sign(transform.localScale.x);
+
+            GameObject cloneProjetil = Instantiate(Projetil, transform.position + offsetCalculado, Quaternion.identity);
             
             ProjectileProperties propriedades = cloneProjetil.GetComponent<ProjectileProperties>();
             

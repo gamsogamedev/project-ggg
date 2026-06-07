@@ -775,7 +775,7 @@ MonoBehaviour:
     m_Bits: 8
   attackDamage: 10
   Projetil: {fileID: 164307453392712662, guid: 09623aa409f4f1247814b06fc6a4c8f3, type: 3}
-  offsetProjetil: {x: 0.5, y: 1.6, z: 0}
+  offsetProjetil: {x: 1, y: 1.6, z: 0}
   posicaoAtaqueNormal: {x: 1, y: 1.8, z: 0}
   posicaoAtaqueCima: {x: 1, y: 2.5, z: 0}
   posicaoAtaqueBaixo: {x: 1, y: 0.4, z: 0}
@@ -2379,7 +2379,7 @@ MonoBehaviour:
     m_Bits: 8
   attackDamage: 10
   Projetil: {fileID: 164307453392712662, guid: 09623aa409f4f1247814b06fc6a4c8f3, type: 3}
-  offsetProjetil: {x: 0.5, y: 1.6, z: 0}
+  offsetProjetil: {x: 1, y: 1.6, z: 0}
   posicaoAtaqueNormal: {x: 1, y: 1.8, z: 0}
   posicaoAtaqueCima: {x: 1, y: 2.5, z: 0}
   posicaoAtaqueBaixo: {x: 1, y: 0.4, z: 0}
