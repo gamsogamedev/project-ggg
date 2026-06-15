@@ -1,4 +1,6 @@
+using System.Numerics;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class FighterMovement : MonoBehaviour
@@ -9,17 +11,29 @@ public class FighterMovement : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
     public Transform opponent;
+    public Vector2 tamanhoCrouch = new Vector2(1f, 1f);
+    public Vector2 offsetCrouch = new Vector2(0f,-0.5f);
     
     private Rigidbody2D rb;
     private Animator anim;
     private float moveDirection;
     private bool isGrounded;
 	private bool isCrouching;
+    private BoxCollider2D col;
+    private Vector2 tamanhoNormal;
+    private Vector2 offsetNormal;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        col = GetComponent<BoxCollider2D>();
+        
+        if(col != null)
+        {
+            tamanhoNormal = col.size;
+            offsetNormal = col.offset;
+        }
     }
 
     public void SetMoveDirection(float direction)
@@ -30,7 +44,17 @@ public class FighterMovement : MonoBehaviour
 	public void SetCrouch(bool crouch)
 	{
 		isCrouching = crouch;
-		if (anim != null) anim.SetBool("isCrouching", isCrouching);
+		if (anim != null)
+        {
+            anim.SetBool("isCrouching", isCrouching);
+            col.size = tamanhoCrouch;
+            col.offset = offsetCrouch;
+        }
+        if(isCrouching == false)
+        {
+            col.size = tamanhoNormal;
+            col.offset = offsetNormal;
+        }
 	}
 	
     void FixedUpdate() 
@@ -42,7 +66,7 @@ public class FighterMovement : MonoBehaviour
 		{
 			anim.SetBool("isGrounded", isGrounded);
 			anim.SetFloat("verticalVelocity", rb.linearVelocity.y);
-		}			
+		}
 
 		
 		float finalSpeed = isCrouching ? 0 : moveDirection * speed;
@@ -75,11 +99,11 @@ public class FighterMovement : MonoBehaviour
 
         if (directionToOpponent > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector2(1, 1);
         }
         else
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector2(-1, 1);
         }
     }
 	
