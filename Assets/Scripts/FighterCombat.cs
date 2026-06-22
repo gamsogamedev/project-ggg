@@ -20,7 +20,7 @@ public class FighterCombat : MonoBehaviour
     private bool isAttacking = false;
 
     // Memória de qual ataque está acontecendo para tocar o som certo
-    private enum TipoAtaque { Normal, Cima, Baixo }
+    public enum TipoAtaque { Normal, Cima, Baixo }
     private TipoAtaque ataqueAtual;
 
     private Animator anim;
@@ -112,7 +112,7 @@ public class FighterCombat : MonoBehaviour
                 FighterHealth health = enemy.GetComponent<FighterHealth>();
                 if (health != null) 
                 {
-                    health.TakeDamage(attackDamage);
+                    health.TakeDamage(attackDamage, ataqueAtual);
                     
                     // Toca o som de acordo com a memória do golpe atual
                     if (fighterAudio != null)
@@ -146,4 +146,28 @@ public class FighterCombat : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    public bool IsBlocking(TipoAtaque tipoAtaque)
+    {
+        if (isAttacking) return false;
+
+        FighterMovement mov = GetComponent<FighterMovement>();
+
+        bool isHoldingForward = (transform.localScale.x > 0 && mov.inputAtual.x > 0.1f) ||
+                                (transform.localScale.x < 0 && mov.inputAtual.x < -0.1f);
+
+        if (!mov.isBlockingButton || !isHoldingForward) return false;
+
+        if (mov.inputAtual.y < -0.4f) 
+        {
+            return tipoAtaque == TipoAtaque.Normal || tipoAtaque == TipoAtaque.Baixo;
+        }
+        else if (mov.inputAtual.y > 0.4f) 
+        {
+            return tipoAtaque == TipoAtaque.Normal || tipoAtaque == TipoAtaque.Cima;
+        }
+        
+        return tipoAtaque == TipoAtaque.Normal;
+    }
+
 }

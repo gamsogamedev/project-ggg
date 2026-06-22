@@ -19,10 +19,13 @@ public class FighterInput : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
         
-        movement.SetMoveDirection(moveInput.x);
-        
-        bool isCrouching = moveInput.y < -0.5f && Mathf.Abs(moveInput.x) < 0.4f;
-        movement.SetCrouch(isCrouching);
+        movement.SetMoveInput(moveInput); 
+    }
+
+    public void OnBlock(InputValue value)
+    {
+        movement.isBlockingButton = value.isPressed;
+        movement.AtualizarHitbox();
     }
 
     public void OnJump(InputValue value)

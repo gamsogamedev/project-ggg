@@ -191,10 +191,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_0
       rect:
         serializedVersion: 2
-        x: 56
+        x: 0
         y: 256
-        width: 14
-        height: 77
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_1
       rect:
         serializedVersion: 2
-        x: 178
+        x: 128
         y: 256
-        width: 30
-        height: 70
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_2
       rect:
         serializedVersion: 2
-        x: 306
+        x: 256
         y: 256
-        width: 31
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_3
       rect:
         serializedVersion: 2
-        x: 435
+        x: 384
         y: 256
-        width: 31
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_4
       rect:
         serializedVersion: 2
-        x: 563
+        x: 512
         y: 256
-        width: 32
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_5
       rect:
         serializedVersion: 2
-        x: 691
+        x: 640
         y: 256
-        width: 31
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +323,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_6
       rect:
         serializedVersion: 2
-        x: 818
+        x: 768
         y: 256
-        width: 32
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,10 +345,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_7
       rect:
         serializedVersion: 2
-        x: 946
+        x: 896
         y: 256
-        width: 32
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +367,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_8
       rect:
         serializedVersion: 2
-        x: 1073
+        x: 1024
         y: 256
-        width: 32
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +389,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_9
       rect:
         serializedVersion: 2
-        x: 1201
+        x: 1152
         y: 256
-        width: 32
-        height: 68
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +411,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_10
       rect:
         serializedVersion: 2
-        x: 49
+        x: 0
         y: 128
-        width: 31
-        height: 68
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_11
       rect:
         serializedVersion: 2
-        x: 176
+        x: 128
         y: 128
-        width: 34
-        height: 68
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,10 +455,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_12
       rect:
         serializedVersion: 2
-        x: 305
+        x: 256
         y: 128
-        width: 39
-        height: 67
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,10 +477,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_13
       rect:
         serializedVersion: 2
-        x: 433
+        x: 384
         y: 128
-        width: 45
-        height: 67
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,10 +499,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_14
       rect:
         serializedVersion: 2
-        x: 561
+        x: 512
         y: 128
-        width: 48
-        height: 67
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,10 +521,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_15
       rect:
         serializedVersion: 2
-        x: 689
+        x: 640
         y: 128
-        width: 49
-        height: 67
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,10 +543,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_16
       rect:
         serializedVersion: 2
-        x: 817
+        x: 768
         y: 128
-        width: 49
-        height: 67
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,10 +565,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_17
       rect:
         serializedVersion: 2
-        x: 944
+        x: 896
         y: 128
-        width: 50
-        height: 68
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,10 +587,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_18
       rect:
         serializedVersion: 2
-        x: 1072
+        x: 1024
         y: 128
-        width: 47
-        height: 68
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_19
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1152
         y: 128
-        width: 44
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +631,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_20
       rect:
         serializedVersion: 2
-        x: 48
+        x: 0
         y: 0
-        width: 41
-        height: 69
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,10 +653,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_21
       rect:
         serializedVersion: 2
-        x: 176
+        x: 128
         y: 0
-        width: 38
-        height: 70
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,10 +675,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_22
       rect:
         serializedVersion: 2
-        x: 304
+        x: 256
         y: 0
-        width: 36
-        height: 70
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,10 +697,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_23
       rect:
         serializedVersion: 2
-        x: 432
+        x: 384
         y: 0
-        width: 34
-        height: 70
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,10 +719,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_24
       rect:
         serializedVersion: 2
-        x: 561
+        x: 512
         y: 0
-        width: 33
-        height: 70
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,10 +741,10 @@ TextureImporter:
       name: Male_spritesheet_punch_1_25
       rect:
         serializedVersion: 2
-        x: 689
+        x: 640
         y: 0
-        width: 32
-        height: 70
+        width: 128
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -773,7 +773,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Male_spritesheet_punch_1_0: 9080817495618180933
       Male_spritesheet_punch_1_1: -7840676038590405957

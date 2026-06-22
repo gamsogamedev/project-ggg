@@ -5,6 +5,17 @@ using Vector2 = UnityEngine.Vector2;
 [RequireComponent(typeof(Rigidbody2D))]
 public class FighterMovement : MonoBehaviour
 {
+    [Header("Hitbox (Defesa Em Pé / Diagonal Cima)")]
+    public Vector2 tamanhoBlockUp = new Vector2(1.2f, 1.8f);
+    public Vector2 offsetBlockUp = new Vector2(0f, 0f);
+
+    [Header("Hitbox (Defesa Agachado / Diagonal Baixo)")]
+    public Vector2 tamanhoBlockDown = new Vector2(1.2f, 1f);
+    public Vector2 offsetBlockDown = new Vector2(0f, -0.5f);
+
+    [HideInInspector] public bool isBlockingButton;
+    [HideInInspector] public Vector2 inputAtual;
+
 	public float speed = 5f;
     public float jumpForce = 12f;
     public Transform groundCheck;
@@ -36,26 +47,53 @@ public class FighterMovement : MonoBehaviour
         }
     }
 
-    public void SetMoveDirection(float direction)
+ public void SetMoveInput(Vector2 input)
     {
-        moveDirection = direction;
+        inputAtual = input;
+        moveDirection = input.x;
+        isCrouching = input.y < -0.4f;
+
+        if (anim != null) anim.SetBool("isCrouching", isCrouching);
+        
+        AtualizarHitbox();
     }
-	
-	public void SetCrouch(bool crouch)
-	{
-		isCrouching = crouch;
-		if (anim != null)
+
+    public void AtualizarHitbox()
+    {
+        if (col == null) return;
+
+        bool isHoldingForward = (transform.localScale.x > 0 && inputAtual.x > 0.1f) ||
+                                (transform.localScale.x < 0 && inputAtual.x < -0.1f);
+
+        bool blockAtivo = isBlockingButton && isHoldingForward;
+        bool blockBaixo = blockAtivo && inputAtual.y < -0.4f;
+        bool blockCima = blockAtivo && inputAtual.y >= -0.4f;
+
+        if (anim != null)
         {
-            anim.SetBool("isCrouching", isCrouching);
-            col.size = tamanhoCrouch;
-            col.offset = offsetCrouch;
+            anim.SetBool("isBlockingDown", blockBaixo);
+            anim.SetBool("isBlockingUp", blockCima);
         }
-        if(isCrouching == false)
+
+        if (blockAtivo)
         {
-            col.size = tamanhoNormal;
-            col.offset = offsetNormal;
+            if (blockBaixo)
+            {
+                col.size = tamanhoBlockDown;
+                col.offset = offsetBlockDown;
+            }
+            else
+            {
+                col.size = tamanhoBlockUp;
+                col.offset = offsetBlockUp;
+            }
         }
-	}
+        else
+        {
+            col.size = isCrouching ? tamanhoCrouch : tamanhoNormal;
+            col.offset = isCrouching ? offsetCrouch : offsetNormal;
+        }
+    }
 	
     void FixedUpdate() 
     {
@@ -69,7 +107,7 @@ public class FighterMovement : MonoBehaviour
 		}
 
 		
-		float finalSpeed = isCrouching ? 0 : moveDirection * speed;
+		float finalSpeed = (isCrouching || isBlockingButton) ? 0 : moveDirection * speed;
 		
 		rb.linearVelocity = new Vector2(finalSpeed, rb.linearVelocity.y);
 
@@ -105,6 +143,8 @@ public class FighterMovement : MonoBehaviour
         {
             transform.localScale = new Vector2(-1, 1);
         }
+
+        AtualizarHitbox();
     }
 	
 }

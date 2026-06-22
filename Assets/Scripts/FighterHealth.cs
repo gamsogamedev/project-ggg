@@ -81,9 +81,26 @@ public class FighterHealth : MonoBehaviour
         }
     }
 	
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, FighterCombat.TipoAtaque tipoAtaque = FighterCombat.TipoAtaque.Normal)
     {
         if (currentHealth <= 0) return;
+
+ 
+        if (combatScript != null && combatScript.IsBlocking(tipoAtaque))
+        {
+            currentHealth -= 1; 
+            
+            if (anim != null) anim.SetInteger("currentHealth", currentHealth);
+            UpdateHealthBar();
+            timerRastro = tempoEsperaRastro;
+            
+            if (currentHealth <= 0)
+            {
+                if (healthBarFill != null) healthBarFill.color = corPerigo;
+                Die();
+            }
+            return;
+        }
 
         currentHealth -= damage;
 
@@ -92,13 +109,12 @@ public class FighterHealth : MonoBehaviour
             anim.SetInteger("currentHealth", currentHealth);
         }
 		
-		UpdateHealthBar();
-		timerRastro = tempoEsperaRastro;
+        UpdateHealthBar();
+        timerRastro = tempoEsperaRastro;
 		
-
         if (currentHealth <= 0)
         {
-			if (healthBarFill != null) healthBarFill.color = corPerigo;
+            if (healthBarFill != null) healthBarFill.color = corPerigo;
             Die();
         }
     }

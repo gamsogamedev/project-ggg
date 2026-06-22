@@ -1020,6 +1020,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2debab729f0e6a34c837e00e2d2a9c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterMovement
+  tamanhoBlockUp: {x: 0.65773, y: 2.29041}
+  offsetBlockUp: {x: 0.01989, y: 1.15702}
+  tamanhoBlockDown: {x: 0.65773, y: 1.41892}
+  offsetBlockDown: {x: 0.01989, y: 0.7}
+  isBlockingButton: 0
+  inputAtual: {x: 0, y: 0}
   speed: 5
   jumpForce: 12
   groundCheck: {fileID: 496330684}
@@ -3031,6 +3037,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2debab729f0e6a34c837e00e2d2a9c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterMovement
+  tamanhoBlockUp: {x: 0.65773, y: 2.29041}
+  offsetBlockUp: {x: 0.01989, y: 1.15702}
+  tamanhoBlockDown: {x: 0.65773, y: 1.41892}
+  offsetBlockDown: {x: 0.01989, y: 0.7}
+  isBlockingButton: 0
+  inputAtual: {x: 0, y: 0}
   speed: 5
   jumpForce: 12
   groundCheck: {fileID: 2139992221}
