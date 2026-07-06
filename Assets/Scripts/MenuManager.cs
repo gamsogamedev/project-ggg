@@ -42,6 +42,7 @@ public class MenuManager : MonoBehaviour
         OpenMainMenuHandle();
     }
 
+    // funções de configurações
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
