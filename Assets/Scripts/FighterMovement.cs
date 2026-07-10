@@ -62,19 +62,23 @@ public class FighterMovement : MonoBehaviour
     {
         if (col == null) return;
 
-        bool isHoldingForward = (transform.localScale.x > 0 && inputAtual.x > 0.1f) ||
-                                (transform.localScale.x < 0 && inputAtual.x < -0.1f);
+        // Verifica se ta pressionado
+        bool blockAtivo = isBlockingButton;
 
-        bool blockAtivo = isBlockingButton && isHoldingForward;
+        // Checar block baixo
         bool blockBaixo = blockAtivo && inputAtual.y < -0.4f;
-        bool blockCima = blockAtivo && inputAtual.y >= -0.4f;
+        
+        // Block cima
+        bool blockCima = blockAtivo && !blockBaixo;
 
         if (anim != null)
         {
+            // Envia para o Animator
             anim.SetBool("isBlockingDown", blockBaixo);
             anim.SetBool("isBlockingUp", blockCima);
         }
 
+        // Ajusta a hitbox
         if (blockAtivo)
         {
             if (blockBaixo)

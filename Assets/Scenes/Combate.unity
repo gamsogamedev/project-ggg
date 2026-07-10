@@ -1141,17 +1141,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1.1424463}
+  m_Offset: {x: -0.019705772, y: 1.1424463}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 2.4657896, y: 2.5421052}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6577368, y: 2.290415}
+  m_Size: {x: 1.6167383, y: 2.2904153}
   m_EdgeRadius: 0
 --- !u!212 &460325271
 SpriteRenderer:
@@ -1202,7 +1202,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2477732434512840966, guid: 2b95bc4f08e1c2e4a89ff45d23717092, type: 3}
+  m_Sprite: {fileID: 2233963754808024724, guid: 4d94b79b752bc074abc07d761e6ba7b2, type: 3}
   m_Color: {r: 0, g: 0.11709547, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2332,14 +2332,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -79803777223448876, guid: acdbb301db63bb749b093df007c9a9ca, type: 3}
+  m_Sprite: {fileID: 639537372777369119, guid: bc1b0b6ec2474f04d919763ed3ce2289, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2924,17 +2924,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.019898891, y: 1.1570239}
+  m_Offset: {x: -0.01970577, y: 1.1570239}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 2.494737, y: 2.381579}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6577368, y: 2.2904148}
+  m_Size: {x: 1.616738, y: 2.2904148}
   m_EdgeRadius: 0
 --- !u!212 &1396889878
 SpriteRenderer:
@@ -2985,7 +2985,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2477732434512840966, guid: 2b95bc4f08e1c2e4a89ff45d23717092, type: 3}
+  m_Sprite: {fileID: -2579967805118163449, guid: 5d6fca40bd675c54cb8b40e969836b35, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4385,14 +4385,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.2, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -79803777223448876, guid: acdbb301db63bb749b093df007c9a9ca, type: 3}
+  m_Sprite: {fileID: 639537372777369119, guid: bc1b0b6ec2474f04d919763ed3ce2289, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -153,21 +153,13 @@ public class FighterCombat : MonoBehaviour
 
         FighterMovement mov = GetComponent<FighterMovement>();
 
-        bool isHoldingForward = (transform.localScale.x > 0 && mov.inputAtual.x > 0.1f) ||
-                                (transform.localScale.x < 0 && mov.inputAtual.x < -0.1f);
-
-        if (!mov.isBlockingButton || !isHoldingForward) return false;
-
+        if (!mov.isBlockingButton) return false;
         if (mov.inputAtual.y < -0.4f) 
         {
             return tipoAtaque == TipoAtaque.Normal || tipoAtaque == TipoAtaque.Baixo;
         }
-        else if (mov.inputAtual.y > 0.4f) 
-        {
-            return tipoAtaque == TipoAtaque.Normal || tipoAtaque == TipoAtaque.Cima;
-        }
         
-        return tipoAtaque == TipoAtaque.Normal;
+        return tipoAtaque == TipoAtaque.Normal || tipoAtaque == TipoAtaque.Cima;
     }
 
 }
