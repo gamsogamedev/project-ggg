@@ -1075,10 +1075,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2debab729f0e6a34c837e00e2d2a9c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterMovement
-  tamanhoBlockUp: {x: 1.616738, y: 2.290415}
-  offsetBlockUp: {x: -0.01970577, y: 1.142446}
-  tamanhoBlockDown: {x: 1.616738, y: 2.290415}
-  offsetBlockDown: {x: -0.01970577, y: 1.142446}
+  tamanhoBlockUp: {x: 2.753211, y: 2.290415}
+  offsetBlockUp: {x: 0.5485308, y: 1.142446}
+  tamanhoBlockDown: {x: 2.753211, y: 2.290415}
+  offsetBlockDown: {x: 0.5485308, y: 1.142446}
   isBlockingButton: 0
   inputAtual: {x: 0, y: 0}
   speed: 5
@@ -1665,7 +1665,6 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1798,15 +1797,15 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4cb1dac999311134686ef0d262742336, type: 3}
+  m_Resource: {fileID: 8300000, guid: 9edbc4ea1f9b77940870afafb4eaf933, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.044
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1888,20 +1887,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea3d717a2141d4547b374cb58f61d41f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicLooper
-  tempoDeInicio: 0
-  tempoDeFim: 37
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,10 +3135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2debab729f0e6a34c837e00e2d2a9c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FighterMovement
-  tamanhoBlockUp: {x: 1.616738, y: 2.290415}
-  offsetBlockUp: {x: -0.01970577, y: 1.157024}
-  tamanhoBlockDown: {x: 1.616738, y: 2.290415}
-  offsetBlockDown: {x: -0.01970577, y: 1.157024}
+  tamanhoBlockUp: {x: 2.753211, y: 2.290415}
+  offsetBlockUp: {x: 0.5485308, y: 1.157024}
+  tamanhoBlockDown: {x: 2.753211, y: 2.290415}
+  offsetBlockDown: {x: 0.5485308, y: 1.157024}
   isBlockingButton: 0
   inputAtual: {x: 0, y: 0}
   speed: 5
@@ -4021,7 +4006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   timerText: {fileID: 1840387975}
-  tempoDeRound: 99
+  tempoDeRound: 90
   painelGameOver: {fileID: 762165474}
   textoVencedor: {fileID: 1418393887}
   player1: {fileID: 1396889883}
