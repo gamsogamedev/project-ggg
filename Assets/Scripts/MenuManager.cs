@@ -43,8 +43,8 @@ public class MenuManager : MonoBehaviour
     }
 
     // funções de configurações
-    public void SetFullscreen(bool isFullscreen)
+    public void SetFullscreen()
     {
-        Screen.fullScreen = isFullscreen;
+        Screen.fullScreen = !Screen.fullScreen;
     }
 }
