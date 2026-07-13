@@ -1089,8 +1089,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   opponent: {fileID: 1396889879}
-  tamanhoCrouch: {x: 0.6577368, y: 1.418928}
-  offsetCrouch: {x: 0, y: 0.7}
+  tamanhoCrouch: {x: 1.180555, y: 1.418928}
+  offsetCrouch: {x: 0.03481698, y: 0.7}
 --- !u!114 &460325267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3149,8 +3149,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   opponent: {fileID: 460325272}
-  tamanhoCrouch: {x: 0.6577368, y: 1.418928}
-  offsetCrouch: {x: 0.01989889, y: 0.7}
+  tamanhoCrouch: {x: 1.180555, y: 1.418928}
+  offsetCrouch: {x: 0.03481698, y: 0.7}
 --- !u!114 &1396889883
 MonoBehaviour:
   m_ObjectHideFlags: 0
