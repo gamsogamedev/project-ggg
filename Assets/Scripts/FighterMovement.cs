@@ -34,12 +34,16 @@ public class FighterMovement : MonoBehaviour
     private BoxCollider2D col;
     private Vector2 tamanhoNormal;
     private Vector2 offsetNormal;
+    
+    private FighterAudio fighterAudio;
+    private bool wasGrounded;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         col = GetComponent<BoxCollider2D>();
+        fighterAudio = GetComponent<FighterAudio>();
         
         if(col != null)
         {
@@ -105,6 +109,11 @@ public class FighterMovement : MonoBehaviour
         float horizontalVelocity = transform.localScale.x > 0 ? rb.linearVelocity.x : rb.linearVelocity.x * -1;
 	
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+		if (isGrounded && !wasGrounded)
+        {
+            if (fighterAudio != null) fighterAudio.PlayLandSound();
+        }
+		wasGrounded = isGrounded;
 		
 		if (anim != null) 
 		{
@@ -131,6 +140,8 @@ public class FighterMovement : MonoBehaviour
 		{
 			rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 			if (anim != null) anim.SetTrigger("Jump");
+
+                if (fighterAudio != null) fighterAudio.PlayJumpSound();
 		}
 	}
 	

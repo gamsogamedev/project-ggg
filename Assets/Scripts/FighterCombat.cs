@@ -96,6 +96,11 @@ public class FighterCombat : MonoBehaviour
                 propriedades.origin = gameObject;
                 propriedades.direction = direction;
             }
+	    if (fighterAudio != null)
+            {
+                fighterAudio.PlayThrowSound();
+            }
+
         }
     }
     

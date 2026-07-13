@@ -116,28 +116,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Andando para frente n\xE3o pensei em algo engra\xE7ado0007_0"
-      rect:
-        serializedVersion: 2
-        x: 484
-        y: 1049
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd8ac0d70943b6010800000000000000
-      internalID: 1183097122292803807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: "Andando para frente n\xE3o pensei em algo engra\xE7ado0007_1"
       rect:
         serializedVersion: 2
@@ -175,6 +153,8 @@ TextureImporter:
     nameFileIdTable:
       "Andando para frente n\xE3o pensei em algo engra\xE7ado0007_0": 1183097122292803807
       "Andando para frente n\xE3o pensei em algo engra\xE7ado0007_1": 7322180711323386400
+      "Andando para frente n\xE3o pensei em algo engra\xE7ado0007_2": -854777077
+      "Andando para frente n\xE3o pensei em algo engra\xE7ado0007_3": -2133115752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -32,7 +32,7 @@ public class ProjectileProperties : MonoBehaviour
 
             if (origin != null && origin.TryGetComponent<FighterAudio>(out FighterAudio audioAtacante))
             {
-                audioAtacante.PlayHitNormalSound();
+                audioAtacante.PlayCardHitSound();
             }
             
             Destroy(gameObject);

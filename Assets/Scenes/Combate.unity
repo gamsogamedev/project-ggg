@@ -958,6 +958,14 @@ MonoBehaviour:
   hitUpVolume: 1
   hitDownSound: {fileID: 8300000, guid: b9ebee3322639354dbf214703da72db0, type: 3}
   hitDownVolume: 1
+  throwSound: {fileID: 8300000, guid: 94c4da0d6d72690499ad2e62a9e6539d, type: 3}
+  throwVolume: 1
+  cardHitSound: {fileID: 8300000, guid: 09a43bbb5f4b07c4289527bb7b577c03, type: 3}
+  cardHitVolume: 1
+  jumpSound: {fileID: 8300000, guid: 529de4623080e5d49ac95d98aa6fe196, type: 3}
+  jumpVolume: 1
+  landSound: {fileID: 8300000, guid: c39495153fa818c4a91206b8d4c70663, type: 3}
+  landVolume: 1
 --- !u!111 &460325263
 Animation:
   m_ObjectHideFlags: 0
@@ -3251,6 +3259,14 @@ MonoBehaviour:
   hitUpVolume: 1
   hitDownSound: {fileID: 8300000, guid: b9ebee3322639354dbf214703da72db0, type: 3}
   hitDownVolume: 1
+  throwSound: {fileID: 8300000, guid: 94c4da0d6d72690499ad2e62a9e6539d, type: 3}
+  throwVolume: 1
+  cardHitSound: {fileID: 8300000, guid: 09a43bbb5f4b07c4289527bb7b577c03, type: 3}
+  cardHitVolume: 1
+  jumpSound: {fileID: 8300000, guid: 529de4623080e5d49ac95d98aa6fe196, type: 3}
+  jumpVolume: 1
+  landSound: {fileID: 8300000, guid: c39495153fa818c4a91206b8d4c70663, type: 3}
+  landVolume: 1
 --- !u!114 &1396889889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3559,7 +3575,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -997061520868448097, guid: 72a744c4356416c43841e41eef97c238, type: 3}
+  m_Sprite: {fileID: 5728809882795980567, guid: e684d5edbaf0c0c4d93e7a75984f7936, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

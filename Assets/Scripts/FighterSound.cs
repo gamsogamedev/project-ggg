@@ -15,6 +15,20 @@ public class FighterAudio : MonoBehaviour
     public AudioClip hitDownSound;
     [Range(0f, 1f)] public float hitDownVolume = 1f;
 
+    [Header("Sons de Magia e Movimento")]
+    public AudioClip throwSound;
+    [Range(0f, 1f)] public float throwVolume = 1f;
+    
+    // NOVA VARIÁVEL: Som da carta acertando o inimigo
+    public AudioClip cardHitSound; 
+    [Range(0f, 1f)] public float cardHitVolume = 1f;
+    
+    public AudioClip jumpSound;
+    [Range(0f, 1f)] public float jumpVolume = 1f;
+    
+    public AudioClip landSound;
+    [Range(0f, 1f)] public float landVolume = 1f;
+
     public void PlayHitNormalSound()
     {
         if (sfxSource != null && hitNormalSound != null) sfxSource.PlayOneShot(hitNormalSound, hitNormalVolume);
@@ -30,4 +44,23 @@ public class FighterAudio : MonoBehaviour
         if (sfxSource != null && hitDownSound != null) sfxSource.PlayOneShot(hitDownSound, hitDownVolume);
     }
 
+    public void PlayThrowSound()
+    {
+        if (sfxSource != null && throwSound != null) sfxSource.PlayOneShot(throwSound, throwVolume);
+    }
+
+    public void PlayCardHitSound()
+    {
+        if (sfxSource != null && cardHitSound != null) sfxSource.PlayOneShot(cardHitSound, cardHitVolume);
+    }
+
+    public void PlayJumpSound()
+    {
+        if (sfxSource != null && jumpSound != null) sfxSource.PlayOneShot(jumpSound, jumpVolume);
+    }
+
+    public void PlayLandSound()
+    {
+        if (sfxSource != null && landSound != null) sfxSource.PlayOneShot(landSound, landVolume);
+    }
 }

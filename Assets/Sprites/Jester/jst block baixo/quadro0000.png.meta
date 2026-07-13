@@ -1,40 +1,16 @@
 fileFormatVersion: 2
-guid: f24c3abb28d07364cbd350e10cb62a19
+guid: 9f24e94a85422a1468a4b99562cb80af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3262695934662182646
-    second: Pulando oia ele pulando0002_0
+      213: 7111396506342550342
+    second: quadro0000_0
   - first:
-      213: -6012711060251357043
-    second: Pulando oia ele pulando0002_1
+      213: 6200105749775289395
+    second: quadro0000_1
   - first:
-      213: -6664653926717122779
-    second: Pulando oia ele pulando0002_2
-  - first:
-      213: -8926350889411657748
-    second: Pulando oia ele pulando0002_3
-  - first:
-      213: -2415596298178943926
-    second: Pulando oia ele pulando0002_4
-  - first:
-      213: 2050110893610410174
-    second: Pulando oia ele pulando0002_5
-  - first:
-      213: -3169649787425630103
-    second: Pulando oia ele pulando0002_6
-  - first:
-      213: 1893302841511945283
-    second: Pulando oia ele pulando0002_7
-  - first:
-      213: 8367127850530080724
-    second: Pulando oia ele pulando0002_8
-  - first:
-      213: -3287861196934659671
-    second: Pulando oia ele pulando0002_9
-  - first:
-      213: 6089618191130731972
-    second: Pulando oia ele pulando0002_10
+      213: -9072769727500051820
+    second: quadro0000_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,13 +52,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  alignment: 9
+  spritePivot: {x: 0.50123185, y: 0.17491984}
+  spritePixelsToUnits: 900
+  spriteBorder: {x: 0, y: 670, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -126,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pulando oia ele pulando0002_3
+      name: quadro0000_0
       rect:
         serializedVersion: 2
-        x: 3584
-        y: 2509
-        width: 11
-        height: 6
+        x: 997
+        y: 2455
+        width: 162
+        height: 206
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,30 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cef3020f82b3f1480800000000000000
-      internalID: -8926350889411657748
+      spriteID: 64b6089d171c0b260800000000000000
+      internalID: 7111396506342550342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pulando oia ele pulando0002_9
+      name: quadro0000_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 227
-        width: 4000
-        height: 1189
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1172
+        y: 721
+        width: 1639
+        height: 2627
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a14be549ab2f52d0800000000000000
-      internalID: -3287861196934659671
+      spriteID: 33c863174533b0650800000000000000
+      internalID: 6200105749775289395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quadro0000_2
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 1370
+        width: 1208
+        height: 2025
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a117f900c071280800000000000000
+      internalID: -9072769727500051820
       vertices: []
       indices: 
       edges: []
@@ -190,8 +175,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2f642594717e4214aa415c9262b5283e
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -200,17 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pulando oia ele pulando0002_0: -3262695934662182646
-      Pulando oia ele pulando0002_1: -6012711060251357043
-      Pulando oia ele pulando0002_10: 6089618191130731972
-      Pulando oia ele pulando0002_2: -6664653926717122779
-      Pulando oia ele pulando0002_3: -8926350889411657748
-      Pulando oia ele pulando0002_4: -2415596298178943926
-      Pulando oia ele pulando0002_5: 2050110893610410174
-      Pulando oia ele pulando0002_6: -3169649787425630103
-      Pulando oia ele pulando0002_7: 1893302841511945283
-      Pulando oia ele pulando0002_8: 8367127850530080724
-      Pulando oia ele pulando0002_9: -3287861196934659671
+      quadro0000_0: 7111396506342550342
+      quadro0000_1: 6200105749775289395
+      quadro0000_2: -9072769727500051820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
