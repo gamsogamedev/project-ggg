@@ -10,6 +10,7 @@ public class FighterCombat : MonoBehaviour
     
     [Header("Projétil (Magia)")]
     public GameObject Projetil;
+    public Color corProjetil;
     public Vector3 offsetProjetil = new Vector3(0, 1f, 0);
     
     [Header("Posições do Attack Point (Local)")]
