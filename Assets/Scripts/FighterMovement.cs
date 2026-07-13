@@ -1,5 +1,6 @@
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using Vector2 = UnityEngine.Vector2;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -101,6 +102,7 @@ public class FighterMovement : MonoBehaviour
 	
     void FixedUpdate() 
     {
+        float horizontalVelocity = transform.localScale.x > 0 ? rb.linearVelocity.x : rb.linearVelocity.x * -1;
 	
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		
@@ -108,6 +110,7 @@ public class FighterMovement : MonoBehaviour
 		{
 			anim.SetBool("isGrounded", isGrounded);
 			anim.SetFloat("verticalVelocity", rb.linearVelocity.y);
+            anim.SetFloat("horizontalVelocity", horizontalVelocity);
 		}
 
 		
